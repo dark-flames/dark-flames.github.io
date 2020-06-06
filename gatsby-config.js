@@ -66,6 +66,14 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./static/images/",
+        name: "image"
+      }
+    },
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",

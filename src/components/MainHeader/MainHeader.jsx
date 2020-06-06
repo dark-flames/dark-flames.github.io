@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./MainHeader.css";
+import DynamicBackgroundImage from '../FluidBackgroundImage/DynamicBackgroundImage'
 
 class MainHeader extends React.Component {
   render() {
@@ -8,18 +9,21 @@ class MainHeader extends React.Component {
     const classes = classNames("main-header", className, {
       "no-cover": !cover
     });
-    const getStyle = () => {
-      if (cover) {
-        return { backgroundImage: `url("${cover}")` };
-      }
-      return null;
-    };
 
-    return (
-      <header className={classes} style={getStyle()}>
-        {children}
-      </header>
-    );
+    if(cover) {
+      return (
+        <header className={classes}>
+          <DynamicBackgroundImage imagePath={cover} />
+          {children}
+        </header>
+      )
+    } else {
+      return (
+        <header className={classes}>
+          {children}
+        </header>
+      )
+    }
   }
 }
 

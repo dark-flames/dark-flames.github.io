@@ -11,7 +11,7 @@ module.exports = {
   siteDescription:
     "Developer / 业余摄影 / 胶片爱好者", // Website description used for RSS feeds/meta description tag.
   siteCover:
-    "./images/cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+    "cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "Darkflames", // The author name used in the RSS file
