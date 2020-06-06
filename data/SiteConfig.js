@@ -21,7 +21,7 @@ module.exports = {
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/dark-flames",
-    "https://twitter.com/home"
+    "https://twitter.com/Darkf1ames"
   ],
   postDefaultCategoryID: "Blog", // Default category for posts.
   postDefaultCover: "https://i.ibb.co/D5GBVk5/DSC07132-s.jpg",
