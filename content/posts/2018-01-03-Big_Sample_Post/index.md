@@ -3,6 +3,8 @@ title: "Big Test"
 category: "moar"
 date: "2018-01-03"
 slug: "Big-Sample_Test"
+cover: "https://i.ibb.co/D5GBVk5/DSC07132-s.jpg"
+author: "darkflames"
 tags:
     - test
     - huge
