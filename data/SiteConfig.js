@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://dark-flames.com", // Domain of your website without pathPrefix.
   pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "Darkflames Blog", // Website description used for RSS feeds/meta description tag.
+    "Developer / 业余摄影 / 胶片爱好者", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "./images/cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
