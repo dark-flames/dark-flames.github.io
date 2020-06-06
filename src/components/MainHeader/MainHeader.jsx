@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import "./MainHeader.css";
-import DynamicBackgroundImage from '../FluidBackgroundImage/DynamicBackgroundImage'
+import DynamicBackgroundImage from '../DynamicBackgroundImage/DynamicBackgroundImage'
 
 class MainHeader extends React.Component {
   render() {
