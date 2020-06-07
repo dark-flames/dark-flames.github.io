@@ -4,7 +4,12 @@
     width: 60%;
     max-width: 710px;
     margin: 4rem auto;
-    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 650px) {
+    .friend {
+        width: 80%;
+    }
 }
 
 .friend h1 {
@@ -20,6 +25,7 @@
     display: -webkit-flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: center;
     justify-content: flex-start;
     margin-bottom: 3rem;
 }

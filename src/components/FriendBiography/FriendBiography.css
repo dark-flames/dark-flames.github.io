@@ -1,3 +1,4 @@
 .friend-biography p {
     margin-bottom: 0;
+    word-wrap: break-word;
 }

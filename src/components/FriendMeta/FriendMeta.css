@@ -6,3 +6,9 @@
     justify-content: center;
     margin-left: 2rem;
 }
+
+@media only screen and (max-width: 500px) {
+    .friend-meta {
+        margin-left: 1.5rem;
+    }
+}
