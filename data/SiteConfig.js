@@ -1,7 +1,8 @@
 module.exports = {
   blogPostDir: "posts", // The name of directory that contains your posts.
-  blogAuthorDir: "blog-authors", // The name of directory that contains your 'authors' folder.
+  blogAuthorDir: "authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "darkflames", // The default and fallback author ID used for blog posts without a defined author.
+  friendsDir: "friends",
   siteTitle: "Darkflames Blog", // Site title.
   siteTitleAlt: "Developer / 业余摄影 / 胶片爱好者", // Alternative site title for SEO.
   siteLogo:

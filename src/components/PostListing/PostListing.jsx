@@ -1,4 +1,4 @@
-import React from "react";
+import  React from "react";
 import { Link } from "gatsby";
 import AuthorThumbnail from "../AuthorThumbnail/AuthorThumbnail";
 import PostTags from "../PostTags/PostTags";

@@ -1,6 +1,5 @@
 // import FontIcon from "react-md/lib/FontIcons";
 import { Link } from "gatsby";
-import config from "../../../data/SiteConfig"
 
 function GetNavList(config) {
   const NavList = [
@@ -34,6 +33,11 @@ function GetNavList(config) {
     component: Link,
     to: `/author/${config.blogAuthorId}`
   });
+  NavList.push({
+    primaryText: "Friends",
+    component: Link,
+    to: `/friends`
+  })
   return NavList;
 }
 export default GetNavList;

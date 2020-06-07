@@ -1,0 +1,45 @@
+.friend {
+    align-items: center;
+    position: relative;
+    width: 60%;
+    max-width: 710px;
+    margin: 4rem auto;
+    word-wrap: break-word;
+}
+
+.friend h1 {
+    margin-bottom: 2rem;
+}
+.friend hr {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.friend-list {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.friend::after {
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: #e7eef2 1px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: #fff 0 0 0 5px;
+}
+
+.friend-name a {
+    text-decoration: none;
+}
+
