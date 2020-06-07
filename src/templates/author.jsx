@@ -69,7 +69,7 @@ class AuthorTemplate extends React.Component {
     return (
       <Layout location={location}>
         <Drawer className="author-template" isOpen={menuOpen}>
-          <Helmet title={`Posts by "${author}" | ${config.siteTitle}`} />
+          <Helmet title={`About "${author}" | ${config.siteTitle}`} />
 
           {/* The blog navigation links */}
           <Navigation config={config} onClose={this.handleOnClose} />
@@ -91,7 +91,6 @@ class AuthorTemplate extends React.Component {
               <AuthorBio bio={getAuthor().bio} />
               <AuthorMeta>
                 <AuthorLocation location={getAuthor().location} />
-                <AuthorWebsite url={getAuthor().url} />
               </AuthorMeta>
               <AuthorStats postEdges={postEdges} />
             </AuthorProfile>
