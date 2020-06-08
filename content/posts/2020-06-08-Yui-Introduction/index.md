@@ -11,7 +11,7 @@ tags:
     - Yui
 ---
 
-Yui 是笔者使用`Rust`编写的第一个项目，本来是准备写一个ORM，但是在处理attribute的过程中写了很多重复的代码，所以决定将这一部分单独抽象成一个lib。
+[Yui](https://github.com/dark-flames/Yui) 是笔者使用`Rust`编写的第一个项目，本来是准备写一个ORM，但是在处理attribute的过程中写了很多重复的代码，所以决定将这一部分单独抽象成一个lib。
 
 ### 核心功能
 Yui 的核心功能是根据 AttributeStructure 定义的 attribute pattern 匹配 `syn`中的 attribute 结构
