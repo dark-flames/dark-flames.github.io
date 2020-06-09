@@ -44,12 +44,12 @@ AttributeStructure 的每一个 field 均对应了所匹配 attribute 中的一�
 
 * String: Rust 中的 `String`类型。
 * Bool: Rust 中的 `bool`类型。
-* Integer: Rust中任意整数类型如`i32`、`u32`等。
-* Float: Rust中任意浮点类型如 `f32  `、`f64`等。
-* Enum: 已经定义的 EnumValue，详见[EnumValue](#enumvalue)。
+* Integer: Rust 中任意整数类型如`i32`、`u32`等。
+* Float: Rust 中任意浮点类型如 `f32  `、`f64`等。
+* Enum: 已经定义的 EnumValue，详见 [EnumValue](#enumvalue)。
 * Object: 其他已经定义的 AttributeStructure。
-* Vec\<T>: 包含T类型的Vec（T不可为 Object、Vec 或者 HashMap）。
-* HashMap<String, T>: 以String作为键的T类型HashMap。
+* Vec\<T>: 包含 T 类型的 Vec（T不可为 Object、Vec 或者 HashMap）。
+* HashMap<String, T>: 以 String 作为键的T类型HashMap。
 
 如果想要将一个字段设为可选字段，只需要将其对应 field 的类型标记为`Option<T>`即可。
 
@@ -110,7 +110,7 @@ enum SomeEnum {
         }
     ```
 * default\
-默认值，如果attribute中这个字段未给出，则将其设置为默认值。对于可选的字段，将会以`Some(default_value)`的形式给出。如果一个非可选字段在attribute中未被赋值并且没有设置默认值，处理过程中将会报错。\
+默认值，如果 attribute 中这个字段未给出，则将其设置为默认值。对于可选的字段，将会以`Some(default_value)`的形式给出。如果一个非可选字段在 attribute 中未被赋值并且没有设置默认值，处理过程中将会报错。\
 `Object`、`Vec`和`HashMap`类型无法设置默认值，对于`Enum`类型的字段，请将默认值设置为 variant 对应的字符串值。
     ```rust
         #[derive(YuiAttribute)]
@@ -123,8 +123,8 @@ enum SomeEnum {
             pub enum_value: SomeEnum
         }
     ```
-* enum_value
-用于区别`Enum`和`Object`类型。如果这个字段为`Enum`类型，请将这个字段设置为true。
+* enum_value\
+用于区别`Enum`和`Object`类型。如果这个字段为`Enum`类型，请将这个字段设置为`true`。
 
 #### 关于`Object`类型
 由于 Rust attribute 语法所限。当一个字段类型为`Object`时，其所对应的 AttributeStructure 的标识符将会失去作用。具体匹配的 attribute 请参照如下例子。
@@ -168,7 +168,7 @@ AttributeStructure 被自动实现了 `quote::ToTokens`，可以直接使用`quo
 
 注意，如果要使用此功能，需要将 AttributeStructure 的所有 field 设置为`pub`，并且为其添加`Clone` derive 宏。
 
-由于输出的TokenStream是AttributeStructure的构造表达式，所以无法将其赋值给`static`或者`const`，请使用`lazy_static`或者将其作为函数的返回值。
+由于输出的 TokenStream 是 AttributeStructure 的构造表达式，所以无法将其赋值给`static`或者`const`，请使用`lazy_static`或者将其作为函数的返回值。
 ```rust
 let attributes = Foo::from_meta(&meta);
 
@@ -184,14 +184,14 @@ quote::quote! {
 
 如果要使用此功能，请打开`generate-reader` feature。
 ##### 生成 Derive 宏
-如果想要使用`yui::get_attribute`和`yui::has_attribute`。首先需要使用`yui::generate_reader!`生成一个derive宏，任何使用了这个宏的对象均可以使用`yui::get_attribute`和`yui::has_attribute`。
+如果想要使用`yui::get_attribute`和`yui::has_attribute`。首先需要使用`yui::generate_reader!`生成一个 derive 宏，任何使用了这个宏的对象均可以使用`yui::get_attribute`和`yui::has_attribute`。
 ```rust
 yui::generate_reader!(DeriveName, [StructAttr], [FieldAttr]);
 ```
-第一个参数为 Derive 的标识符。第二个参数为读取结构上 AttributeStructure 的列表，第三个可选参数为读取Field上AttributeStructure的列表。
+第一个参数为 Derive 的标识符。第二个参数为读取结构上 AttributeStructure 的列表，第三个可选参数为读取 Field 上 AttributeStructure 的列表。
 请在这一文件中`use`所需要的所有 AttributeStructure。
 
-`yui::generate_reader!`将会生成一个`pub`的 derive 宏，所以请为你的lib打开proc_macro。
+`yui::generate_reader!`将会生成一个`pub`的 derive 宏，所以请为你的 lib 打开`proc_macro`。
 
 #### 读取 attribute
 将`yui::generate_reader!`生成的 derive 宏作用在任意`struct`、`enum` 或` union` 上，即可对其使用`yui::get_attribute`和`yui::has_attribute`。
