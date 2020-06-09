@@ -103,25 +103,25 @@ enum SomeEnum {
 * alias\
 重新设置 field 对应的字段名，默认为 field 的标识符(转换为`snake_case`)。
     ```rust
-        #[derive(YuiAttribute)]
-        struct Foo {
-            #[attribute_field(alias = "i32")]
-            pub int32: i32,
-        }
+    #[derive(YuiAttribute)]
+    struct Foo {
+        #[attribute_field(alias = "i32")]
+        pub int32: i32,
+    }
     ```
 * default\
 默认值，如果 attribute 中这个字段未给出，则将其设置为默认值。对于可选的字段，将会以`Some(default_value)`的形式给出。如果一个非可选字段在 attribute 中未被赋值并且没有设置默认值，处理过程中将会报错。\
 `Object`、`Vec`和`HashMap`类型无法设置默认值，对于`Enum`类型的字段，请将默认值设置为 variant 对应的字符串值。
     ```rust
-        #[derive(YuiAttribute)]
-        struct Foo {
-            #[attribute_field(default = 1024)]
-            pub int32: i32,
-            #[attribute_field(default = "string")]
-            pub string: String,
-            #[attribute_field(default = "aaa", enum_value=true]
-            pub enum_value: SomeEnum
-        }
+    #[derive(YuiAttribute)]
+    struct Foo {
+        #[attribute_field(default = 1024)]
+        pub int32: i32,
+        #[attribute_field(default = "string")]
+        pub string: String,
+        #[attribute_field(default = "aaa", enum_value=true]
+        pub enum_value: SomeEnum
+    }
     ```
 * enum_value\
 用于区别`Enum`和`Object`类型。如果这个字段为`Enum`类型，请将这个字段设置为`true`。
