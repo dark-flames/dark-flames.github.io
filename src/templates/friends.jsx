@@ -86,7 +86,9 @@ class FriendsPage extends Component {
 
 export const pageQuery = graphql`
 query FriendsQuery {
-  allFriendsJson {
+  allFriendsJson(
+    sort: { fields: [name], order: ASC }
+  ) {
     edges {
       node {
         url
