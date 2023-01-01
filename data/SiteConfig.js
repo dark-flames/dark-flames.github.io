@@ -7,7 +7,7 @@ module.exports = {
   siteTitleAlt: "Developer / 业余摄影 / 胶片爱好者", // Alternative site title for SEO.
   siteLogo:
     "https://s.gravatar.com/avatar/9151e9b4581ec2930fdaad9677fbc748?s=80", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
-  siteUrl: "https://dark-flames.dev", // Domain of your website without pathPrefix.
+  siteUrl: "https://www.dark-flames.dev", // Domain of your website without pathPrefix.
   pathPrefix: "./", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "Developer / 业余摄影 / 胶片爱好者", // Website description used for RSS feeds/meta description tag.
@@ -22,7 +22,9 @@ module.exports = {
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/dark-flames",
-    "https://twitter.com/Darkf1ames"
+    "https://twitter.com/Darkf1ames",
+    "mailto: darkf1ames@pm.me",
+    "https://t.me/Dark_flames"
   ],
   postDefaultCategoryID: "Blog", // Default category for posts.
   postDefaultCover: "https://i.ibb.co/D5GBVk5/DSC07132-s.jpg",
@@ -37,6 +39,11 @@ module.exports = {
       label: "Twitter",
       url: "https://twitter.com/Darkf1ames",
       iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
+    },
+    {
+      label: "Email",
+      url: "mailto: darkf1ames@pm.me",
+      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
     }
   ],
   // Copyright string for the footer of the website and RSS feed.
