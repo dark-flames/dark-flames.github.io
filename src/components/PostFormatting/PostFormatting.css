@@ -72,6 +72,10 @@ h1:not(.post-template) .post-title {
     text-decoration: underline;
 }
 
+.post-content img {
+    width: 100%;
+}
+
 .post-template .post-meta,
 .page-template .post-meta {
     margin: 0;

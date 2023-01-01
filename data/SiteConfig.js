@@ -7,8 +7,8 @@ module.exports = {
   siteTitleAlt: "Developer / 业余摄影 / 胶片爱好者", // Alternative site title for SEO.
   siteLogo:
     "https://s.gravatar.com/avatar/9151e9b4581ec2930fdaad9677fbc748?s=80", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
-  siteUrl: "https://dark-flames.com", // Domain of your website without pathPrefix.
-  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
+  siteUrl: "https://dark-flames.dev", // Domain of your website without pathPrefix.
+  pathPrefix: "./", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "Developer / 业余摄影 / 胶片爱好者", // Website description used for RSS feeds/meta description tag.
   siteCover:
