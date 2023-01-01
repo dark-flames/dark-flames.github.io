@@ -72,9 +72,9 @@
   "scripts": {
     "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "serve": "NODE_OPTIONS=--openssl-legacy-provider gatsby serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
-    "build:pp": "NODE_OPTIONS=--openssl-legacy-provider gatsby build --prefix-paths",
-    "build:gh": "NODE_OPTIONS=--openssl-legacy-provider npm run clean && npm run build:pp && gh-pages -d public",
+    "build": "gatsby build",
+    "build:pp": "gatsby build --prefix-paths",
+    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",
     "clean": "rm -rf .cache && rm -rf public",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public --ignore-pattern static .",
